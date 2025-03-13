@@ -443,17 +443,19 @@ const HomePage = () => {
                       thumbClassName="range-slider-handle"
                       trackClassName="range-slider-track"
                       min={0}
-                      max={1000}
-                      defaultValue={450}
+                      max={10000000} // No comma here (numbers cannot have commas)
+                      defaultValue={450000} // No comma here
                       ariaLabel={["Handle"]}
                       ariaValuetext={(state) =>
-                        `Handle value ${state.valueNow}`
+                        `Handle value ${new Intl.NumberFormat().format(
+                          state.valueNow
+                        )}`
                       }
                       step={1}
                       renderThumb={(props, state) => (
                         <div {...props}>
                           <div className="range-slider-tooltip">
-                            $ {state.valueNow}
+                            ₱ {new Intl.NumberFormat().format(state.valueNow)}
                           </div>
                         </div>
                       )}
