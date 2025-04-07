@@ -1,9 +1,1 @@
-{
-  "/_app": "pages/_app.js",
-  "/_error": "pages/_error.js",
-  "/_document": "pages/_document.js",
-  "/add-property": "pages/add-property.js",
-  "/catalog": "pages/catalog.js",
-  "/": "pages/index.js",
-  "/account-info": "pages/account-info.js"
-}
+{}
