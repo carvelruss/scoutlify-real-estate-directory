@@ -1,0 +1,1 @@
+self.__NEXT_FONT_MANIFEST='{"pages":{"/single-v1":[]},"app":{},"appUsingSizeAdjust":false,"pagesUsingSizeAdjust":false}';

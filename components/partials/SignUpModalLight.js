@@ -8,16 +8,60 @@ import ImageLoader from '../ImageLoader'
 import PasswordToggle from '../PasswordToggle'
 
 const SignUpModalLight = ({ onSwap, pillButtons, ...props }) => {
-
-  // Form validation
   const [validated, setValidated] = useState(false)
-  const handleSubmit = (event) => {
+
+  const handleSubmit = async (event) => {
+    event.preventDefault()
     const form = event.currentTarget
+
     if (form.checkValidity() === false) {
-      event.preventDefault()
       event.stopPropagation()
+      setValidated(true)
+      return
     }
-    setValidated(true);
+
+    setValidated(true)
+
+    const full_name = form['su-name'].value
+    const email = form['su-email'].value
+    const password = form['su-password'].value
+    const confirm = form['su-confirm-password'].value
+    const agree = form['terms-agree'].checked
+
+    if (!agree) {
+      alert('Please agree to the Terms of Use and Privacy Policy.')
+      return
+    }
+
+    if (password.length < 8) {
+      alert('Password must be at least 8 characters long.')
+      return
+    }
+
+    if (password !== confirm) {
+      alert('Passwords do not match.')
+      return
+    }
+
+    try {
+      const res = await fetch('https://scoutlify-api.russserafin158061.workers.dev/api/signup', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ full_name, email, password }),
+      })
+
+      const data = await res.json()
+
+      if (res.ok) {
+        alert('Signup successful!')
+        props.onHide() // Close modal
+      } else {
+        alert(data.error || 'Signup failed.')
+      }
+    } catch (err) {
+      console.error('Signup error:', err)
+      alert('Something went wrong. Please try again.')
+    }
   }
 
   return (
@@ -30,7 +74,7 @@ const SignUpModalLight = ({ onSwap, pillButtons, ...props }) => {
         />
         <div className='row mx-0 align-items-center'>
           <div className='col-md-6 border-end-md p-4 p-sm-5'>
-            <h2 className='h3 mb-4 mb-sm-5'>Join Finder.<br />Get premium benefits:</h2>
+            <h2 className='h3 mb-4 mb-sm-5'>Join Scoutlify.<br />Get premium benefits:</h2>
             <ul className='list-unstyled mb-4 mb-sm-5'>
               <li className='d-flex mb-2'>
                 <i className='fi-check-circle text-primary mt-1 me-2'></i>
@@ -50,11 +94,14 @@ const SignUpModalLight = ({ onSwap, pillButtons, ...props }) => {
                 src='/images/signin-modal/signup.svg'
                 width={344}
                 height={404}
-                alt='Illusration'
+                alt='Illustration'
               />
             </div>
-            <div className='mt-sm-4 pt-md-3'>Already have an account? <a href='#' onClick={onSwap}>Sign in</a></div>
+            <div className='mt-sm-4 pt-md-3'>
+              Already have an account? <a href='#' onClick={onSwap}>Sign in</a>
+            </div>
           </div>
+
           <div className='col-md-6 px-4 pt-2 pb-4 px-sm-5 pb-sm-5 pt-md-5'>
             <Button variant={`outline-info ${pillButtons ? 'rounded-pill' : ''} w-100 mb-3`}>
               <i className='fi-google fs-lg me-1'></i>
@@ -69,21 +116,15 @@ const SignUpModalLight = ({ onSwap, pillButtons, ...props }) => {
               <div className='px-3'>Or</div>
               <hr className='w-100' />
             </div>
+
             <Form noValidate validated={validated} onSubmit={handleSubmit}>
               <Form.Group controlId='su-name' className='mb-4'>
                 <Form.Label>Full name</Form.Label>
-                <Form.Control
-                  placeholder='Enter your full name'
-                  required
-                />
+                <Form.Control placeholder='Enter your full name' required />
               </Form.Group>
               <Form.Group controlId='su-email' className='mb-4'>
                 <Form.Label>Email address</Form.Label>
-                <Form.Control
-                  type='email'
-                  placeholder='Enter your email'
-                  required
-                />
+                <Form.Control type='email' placeholder='Enter your email' required />
               </Form.Group>
               <Form.Group className='mb-4'>
                 <Form.Label htmlFor='su-password'>
@@ -98,11 +139,18 @@ const SignUpModalLight = ({ onSwap, pillButtons, ...props }) => {
               <Form.Check
                 type='checkbox'
                 id='terms-agree'
-                label={[<span key={1}>By joining, I agree to the </span>, <Link key={2} href='#'>Terms of use</Link>, <span key={3}> and </span>, <Link key={4} href='#'>Privacy policy</Link>]}
+                label={[
+                  <span key={1}>By joining, I agree to the </span>,
+                  <Link key={2} href='#'>Terms of use</Link>,
+                  <span key={3}> and </span>,
+                  <Link key={4} href='#'>Privacy policy</Link>
+                ]}
                 required
                 className='mb-4'
               />
-              <Button type='submit' size='lg' variant={`primary ${pillButtons ? 'rounded-pill' : ''} w-100`}>Sign up</Button>
+              <Button type='submit' size='lg' variant={`primary ${pillButtons ? 'rounded-pill' : ''} w-100`}>
+                Sign up
+              </Button>
             </Form>
           </div>
         </div>

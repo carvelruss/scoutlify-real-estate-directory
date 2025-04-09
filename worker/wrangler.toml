@@ -1,0 +1,8 @@
+name = "scoutlify-api"
+main = "src/index.js"
+compatibility_date = "2025-04-08"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "scoutlify_db"
+database_id = "7dd01195-56b6-4cb7-ae7b-dc43d5cb21ab"

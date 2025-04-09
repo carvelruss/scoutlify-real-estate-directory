@@ -46,13 +46,13 @@ const AccountInfoPage = () => {
   }
 
   // Name field state
-  const [name, setName] = useState('Annette Black')
+  const [name, setName] = useState('Carvel Russ')
 
   // Email field state
-  const [email, setEmail] = useState('annette_black@email.com')
+  const [email, setEmail] = useState('hello@carvelruss.com')
 
   // Phone field state
-  const [phone, setPhone] = useState('(302) 555-0107')
+  const [phone, setPhone] = useState('(+63) 909-135-2732')
 
   // Company field state
   const [company, setCompany] = useState('')
