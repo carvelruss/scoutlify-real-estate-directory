@@ -294,9 +294,8 @@ const AddPropertyPage = () => {
                     }}
                     aria-controls='moreOverview'
                     aria-expanded={overviewOpen}
-                    className={`collapse-label${
-                      overviewOpen ? '' : ' collapsed'
-                    }`}
+                    className={`collapse-label${overviewOpen ? '' : ' collapsed'
+                      }`}
                   >
                     {overviewOpen ? 'Show less' : 'Show more'}
                   </a>
@@ -377,9 +376,8 @@ const AddPropertyPage = () => {
                     }}
                     aria-controls='moreAmenities'
                     aria-expanded={amenitiesOpen}
-                    className={`collapse-label${
-                      amenitiesOpen ? '' : ' collapsed'
-                    }`}
+                    className={`collapse-label${amenitiesOpen ? '' : ' collapsed'
+                      }`}
                   >
                     {amenitiesOpen ? 'Show less' : 'Show more'}
                   </a>
@@ -397,9 +395,9 @@ const AddPropertyPage = () => {
           <Col lg={8}>
             {/* Breadcrumb */}
             <Breadcrumb className='mb-3 pt-2 pt-lg-3'>
-              <Link href='' passHref>
-                <Breadcrumb.Item>Home</Breadcrumb.Item>
-              </Link>
+              <Breadcrumb.Item linkAs={Link} href=''>
+                Home
+              </Breadcrumb.Item>
               <Breadcrumb.Item active>Add property</Breadcrumb.Item>
             </Breadcrumb>
 
@@ -933,9 +931,8 @@ const AddPropertyPage = () => {
                 {anchors.map((anchor, indx) => (
                   <li key={indx} className='d-flex align-items-center'>
                     <i
-                      className={`fi-check text-${
-                        anchor.completed ? 'primary' : 'muted'
-                      } me-2`}
+                      className={`fi-check text-${anchor.completed ? 'primary' : 'muted'
+                        } me-2`}
                     ></i>
                     <ScrollLink
                       to={anchor.to}

@@ -46,13 +46,13 @@ const AccountInfoPage = () => {
   }
 
   // Name field state
-  const [name, setName] = useState('Carvel Russ')
+  const [name, setName] = useState('Annette Black')
 
   // Email field state
-  const [email, setEmail] = useState('hello@carvelruss.com')
+  const [email, setEmail] = useState('annette_black@email.com')
 
   // Phone field state
-  const [phone, setPhone] = useState('(+63) 909-135-2732')
+  const [phone, setPhone] = useState('(302) 555-0107')
 
   // Company field state
   const [company, setCompany] = useState('')
@@ -269,9 +269,8 @@ const AccountInfoPage = () => {
             }}
             aria-controls='moreSocials'
             aria-expanded={socialOpen}
-            className={`collapse-label d-inline-block fs-sm fw-bold text-decoration-none py-2${
-              socialOpen ? '' : ' collapsed'
-            }`}
+            className={`collapse-label d-inline-block fs-sm fw-bold text-decoration-none py-2${socialOpen ? '' : ' collapsed'
+              }`}
           >
             <i className='fi-arrow-down me-2'></i>
             {socialOpen ? 'Show less' : 'Show more'}

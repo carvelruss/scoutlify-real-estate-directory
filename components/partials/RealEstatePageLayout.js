@@ -63,7 +63,7 @@ const RealEstatePageLayout = (props) => {
   return (
     <>
       <Head>
-        <title>{`Finder | Real Estate - ${props.pageTitle}`}</title>
+        <title>{`Scoutlify – Buy, Sell & Rent Properties | Real Estate Listings`}</title>
       </Head>
 
       {/* Sign in modal */}
@@ -96,12 +96,11 @@ const RealEstatePageLayout = (props) => {
           as={StickyNavbar}
           expand='lg'
           bg='light'
-          className={`fixed-top${
-            props.navbarExtraClass ? ` ${props.navbarExtraClass}` : ''
-          }`}
+          className={`fixed-top${props.navbarExtraClass ? ` ${props.navbarExtraClass}` : ''
+            }`}
         >
           <Container>
-            <Navbar.Brand as={Link} href='' className='me-3 me-xl-4'>
+            <Navbar.Brand as={Link} href='/' className='me-3 me-xl-4'>
               <ImageLoader
                 priority
                 src='/images/logo/logo-dark.svg'
@@ -201,10 +200,10 @@ const RealEstatePageLayout = (props) => {
               as={Link}
               href='/add-property'
               size='sm'
-              className='order-lg-3 ms-2'
+              className='order-lg-3 ms-2 text-capitalize'
             >
               <i className='fi-plus me-2'></i>
-              Add <span className='d-none d-sm-inline'>property</span>
+              Add&nbsp;<span className='d-none d-sm-inline'>property</span>
             </Button>
 
             <Navbar.Collapse id='navbarNav' className='order-md-2'>
@@ -668,7 +667,7 @@ const RealEstatePageLayout = (props) => {
           </Row>
 
           {/* Mobile app CTA */}
-          <div className='bg-dark rounded-3'>
+          <div className='bg-dark rounded-3 d-none'>
             <Col
               xs={10}
               md={11}
@@ -708,12 +707,12 @@ const RealEstatePageLayout = (props) => {
           <div className='text-center fs-sm pt-4 mt-3 pb-2'>
             &copy; All rights reserved. Made by{' '}
             <a
-              href='https://createx.studio/'
+              href='https://carvelruss.com/'
               className='d-inline-block nav-link p-0'
               target='_blank'
               rel='noreferrer'
             >
-              Createx Studio
+              Carvel Russ
             </a>
           </div>
         </Container>

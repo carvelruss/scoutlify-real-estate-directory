@@ -1,71 +1,38 @@
 {
   "components\\PropertyCard.js -> ./partials/CardImage": {
-    "id": 27963,
+    "id": "components\\PropertyCard.js -> ./partials/CardImage",
     "files": [
-      "static/chunks/6507-efcb940bc0688336.js",
-      "static/chunks/7963.b2cb470ac38fb43b.js"
+      "static/chunks/_pages-dir-browser_components_partials_CardImage_js.js"
     ]
   },
   "components\\PropertyCard.js -> ./partials/CardImageSlider": {
-    "id": 28026,
+    "id": "components\\PropertyCard.js -> ./partials/CardImageSlider",
     "files": [
-      "static/css/6b5691361b9f805f.css",
-      "static/chunks/3635-920cd25090b6486d.js",
-      "static/chunks/6507-efcb940bc0688336.js",
-      "static/chunks/8026.07158eda1b763bd5.js"
+      "static/chunks/_pages-dir-browser_components_partials_CardImageSlider_js.js"
     ]
   },
   "node_modules\\next\\dist\\client\\index.js -> ../pages/_app": {
-    "id": 57,
+    "id": "node_modules\\next\\dist\\client\\index.js -> ../pages/_app",
     "files": [
-      "static/chunks/57.f6e61451d712b805.js"
+      "static/chunks/_pages-dir-browser_node_modules_next_dist_pages__app_js.js"
     ]
   },
   "node_modules\\next\\dist\\client\\index.js -> ../pages/_error": {
-    "id": 84100,
+    "id": "node_modules\\next\\dist\\client\\index.js -> ../pages/_error",
     "files": [
-      "static/chunks/4100.df868bd7c4442351.js"
+      "static/chunks/_pages-dir-browser_node_modules_next_dist_pages__error_js.js"
     ]
   },
   "pages\\_app.js -> react-bootstrap/SSRProvider": {
-    "id": 97903,
+    "id": "pages\\_app.js -> react-bootstrap/SSRProvider",
     "files": [
-      "static/chunks/7903.6f26710162f70732.js"
-    ]
-  },
-  "pages\\add-property.js -> ../components/partials/CustomMarker": {
-    "id": 52209,
-    "files": [
-      "static/chunks/25f4ac2a.5f63052908d8416f.js",
-      "static/chunks/2209.2afe670ecc02c13f.js"
-    ]
-  },
-  "pages\\add-property.js -> react-leaflet": {
-    "id": 86817,
-    "files": [
-      "static/chunks/25f4ac2a.5f63052908d8416f.js",
-      "static/chunks/6817.39dff15db50350b2.js"
-    ]
-  },
-  "pages\\catalog.js -> ../components/partials/CustomMarker": {
-    "id": 52209,
-    "files": [
-      "static/chunks/25f4ac2a.5f63052908d8416f.js",
-      "static/chunks/2209.2afe670ecc02c13f.js"
-    ]
-  },
-  "pages\\catalog.js -> react-leaflet": {
-    "id": 86817,
-    "files": [
-      "static/chunks/25f4ac2a.5f63052908d8416f.js",
-      "static/chunks/6817.39dff15db50350b2.js"
+      "static/chunks/_pages-dir-browser_node_modules_react-bootstrap_esm_SSRProvider_js.js"
     ]
   },
   "pages\\index-2.js -> ../components/BgParallax": {
-    "id": 33881,
+    "id": "pages\\index-2.js -> ../components/BgParallax",
     "files": [
-      "static/chunks/8171.dd645711cf318a3b.js",
-      "static/chunks/3881.6fda603bfae46e26.js"
+      "static/chunks/_pages-dir-browser_components_BgParallax_js.js"
     ]
   }
 }

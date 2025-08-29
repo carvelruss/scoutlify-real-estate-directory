@@ -443,8 +443,8 @@ const HomePage = () => {
                       thumbClassName='range-slider-handle'
                       trackClassName='range-slider-track'
                       min={0}
-                      max={1000}
-                      defaultValue={450}
+                      max={10000000}
+                      defaultValue={450000}
                       ariaLabel={['Handle']}
                       ariaValuetext={(state) =>
                         `Handle value ${state.valueNow}`
@@ -453,7 +453,7 @@ const HomePage = () => {
                       renderThumb={(props, state) => (
                         <div {...props}>
                           <div className='range-slider-tooltip'>
-                            $ {state.valueNow}
+                            ₱ {state.valueNow.toLocaleString()}
                           </div>
                         </div>
                       )}
