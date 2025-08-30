@@ -29,10 +29,16 @@
       "static/chunks/_pages-dir-browser_node_modules_react-bootstrap_esm_SSRProvider_js.js"
     ]
   },
-  "pages\\index-2.js -> ../components/BgParallax": {
-    "id": "pages\\index-2.js -> ../components/BgParallax",
+  "pages\\add-property.js -> ../components/partials/CustomMarker": {
+    "id": "pages\\add-property.js -> ../components/partials/CustomMarker",
     "files": [
-      "static/chunks/_pages-dir-browser_components_BgParallax_js.js"
+      "static/chunks/_pages-dir-browser_components_partials_CustomMarker_js.js"
+    ]
+  },
+  "pages\\add-property.js -> react-leaflet": {
+    "id": "pages\\add-property.js -> react-leaflet",
+    "files": [
+      "static/chunks/_pages-dir-browser_node_modules_react-leaflet_lib_index_js.js"
     ]
   }
 }

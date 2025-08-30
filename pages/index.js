@@ -376,9 +376,7 @@ const HomePage = () => {
               Easy way to find <br /> a perfect property
             </h1>
             <p className='position-relative lead'>
-              We provide a complete service for the sale, purchase or rental of
-              real estate. We have been operating more than 10 years. Search
-              millions of apartments and houses on Finder.
+              Scoutlify makes buying, selling, and renting properties simple and hassle-free. With over 10 years of experience, we help you explore millions of houses and apartments to find the perfect match.
             </p>
           </Col>
 
