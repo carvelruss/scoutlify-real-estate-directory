@@ -28,17 +28,5 @@
     "files": [
       "static/chunks/_pages-dir-browser_node_modules_react-bootstrap_esm_SSRProvider_js.js"
     ]
-  },
-  "pages\\add-property.js -> ../components/partials/CustomMarker": {
-    "id": "pages\\add-property.js -> ../components/partials/CustomMarker",
-    "files": [
-      "static/chunks/_pages-dir-browser_components_partials_CustomMarker_js.js"
-    ]
-  },
-  "pages\\add-property.js -> react-leaflet": {
-    "id": "pages\\add-property.js -> react-leaflet",
-    "files": [
-      "static/chunks/_pages-dir-browser_node_modules_react-leaflet_lib_index_js.js"
-    ]
   }
 }

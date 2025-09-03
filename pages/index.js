@@ -260,10 +260,16 @@ const HomePage = () => {
     },
   ]
 
+  // inside your component function, add:
+  const [loanAmount, setLoanAmount] = useState("");
+  const [downPayment, setDownPayment] = useState("");
+  const [interestRate, setInterestRate] = useState("");
+  const [loanTerm, setLoanTerm] = useState("");
+
   return (
     <RealEstatePageLayout pageTitle='Home v.1' activeNav='Home'>
       {/* Property cost calculator modal */}
-      <Modal centered show={modalShow} onHide={handleModalClose}>
+      {/* <Modal centered show={modalShow} onHide={handleModalClose}>
         <Modal.Header className='d-block position-relative border-0 pb-0 px-sm-5 px-4'>
           <Modal.Title as='h4' className='mt-4 text-center'>
             Explore your property’s value
@@ -344,6 +350,96 @@ const HomePage = () => {
             </Form.Group>
             <Button type='submit' variant='primary d-block w-100 mb-4'>
               <i className='fi-calculator me-2'></i>
+              Calculate
+            </Button>
+          </Form>
+        </Modal.Body>
+      </Modal> */}
+      <Modal centered show={modalShow} onHide={handleModalClose}>
+        <Modal.Header className="d-block position-relative border-0 pb-0 px-sm-5 px-4">
+          <Modal.Title as="h4" className="mt-4 text-center">
+            Explore your property’s value
+          </Modal.Title>
+          <CloseButton
+            onClick={handleModalClose}
+            aria-label="Close modal"
+            className="position-absolute top-0 end-0 mt-3 me-3"
+          />
+        </Modal.Header>
+        <Modal.Body className="px-sm-5 px-4">
+          <Form noValidate validated={validated} onSubmit={handleSubmit}>
+            {/* Loan Amount */}
+            <Form.Group controlId="loanAmount" className="mb-3">
+              <Form.Label className="fw-bold mb-2">Loan Amount (₱)</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder="Enter loan amount"
+                required
+                value={loanAmount}
+                onChange={(e) => {
+                  let value = e.target.value.replace(/,/g, "");
+                  if (!isNaN(value) && value !== "") {
+                    setLoanAmount(Number(value).toLocaleString());
+                  } else {
+                    setLoanAmount("");
+                  }
+                }}
+              />
+              <Form.Control.Feedback type="invalid">
+                Please enter the loan amount.
+              </Form.Control.Feedback>
+            </Form.Group>
+
+            {/* Down Payment */}
+            <Form.Group controlId="downPayment" className="mb-3">
+              <Form.Label className="fw-bold mb-2">Down Payment (₱)</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder="Enter down payment (optional)"
+                value={downPayment}
+                onChange={(e) => {
+                  let value = e.target.value.replace(/,/g, "");
+                  if (!isNaN(value) && value !== "") {
+                    setDownPayment(Number(value).toLocaleString());
+                  } else {
+                    setDownPayment("");
+                  }
+                }}
+              />
+            </Form.Group>
+
+            {/* Interest Rate */}
+            <Form.Group controlId="interestRate" className="mb-3">
+              <Form.Label className="fw-bold mb-2">Annual Interest Rate (%)</Form.Label>
+              <Form.Control
+                type="number"
+                placeholder="Enter interest rate"
+                required
+                value={interestRate}
+                onChange={(e) => setInterestRate(e.target.value)}
+              />
+              <Form.Control.Feedback type="invalid">
+                Please enter the interest rate.
+              </Form.Control.Feedback>
+            </Form.Group>
+
+            {/* Loan Term */}
+            <Form.Group controlId="loanTerm" className="mb-4">
+              <Form.Label className="fw-bold mb-2">Loan Term (Years)</Form.Label>
+              <Form.Control
+                type="number"
+                placeholder="Enter loan term"
+                required
+                value={loanTerm}
+                onChange={(e) => setLoanTerm(e.target.value)}
+              />
+              <Form.Control.Feedback type="invalid">
+                Please enter the loan term.
+              </Form.Control.Feedback>
+            </Form.Group>
+
+            <Button type="submit" variant="primary d-block w-100 mb-4">
+              <i className="fi-calculator me-2"></i>
               Calculate
             </Button>
           </Form>
