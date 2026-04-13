@@ -24,7 +24,7 @@ import FilePondPluginImagePreview from 'filepond-plugin-image-preview'
 import FilePondPluginImageCrop from 'filepond-plugin-image-crop'
 import FilePondPluginImageResize from 'filepond-plugin-image-resize'
 import FilePondPluginImageTransform from 'filepond-plugin-image-transform'
-import NumberFormat from 'react-number-format'
+import { PatternFormat } from 'react-number-format'
 import 'filepond/dist/filepond.min.css'
 import 'filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css'
 
@@ -877,7 +877,7 @@ const AddPropertyPage = () => {
                     Phone number <span className='text-danger'>*</span>
                   </Form.Label>
                   <Form.Control
-                    as={NumberFormat}
+                    as={PatternFormat}
                     format='+1(##) ###-####'
                     defaultValue='+1(39) 555-0107'
                     placeholder='+1(00) 000-0000'
