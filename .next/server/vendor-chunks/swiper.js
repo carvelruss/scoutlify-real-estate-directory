@@ -10,40 +10,40 @@ exports.id = "vendor-chunks/swiper";
 exports.ids = ["vendor-chunks/swiper"];
 exports.modules = {
 
-/***/ "(pages-dir-node)/./node_modules/swiper/modules/effect-fade/effect-fade.min.css":
-/*!*********************************************************************!*\
-  !*** ./node_modules/swiper/modules/effect-fade/effect-fade.min.css ***!
-  \*********************************************************************/
+/***/ "(pages-dir-node)/./node_modules/swiper/modules/effect-fade.css":
+/*!*****************************************************!*\
+  !*** ./node_modules/swiper/modules/effect-fade.css ***!
+  \*****************************************************/
 /***/ (() => {
 
 
 
 /***/ }),
 
-/***/ "(pages-dir-node)/./node_modules/swiper/modules/navigation/navigation.min.css":
-/*!*******************************************************************!*\
-  !*** ./node_modules/swiper/modules/navigation/navigation.min.css ***!
-  \*******************************************************************/
+/***/ "(pages-dir-node)/./node_modules/swiper/modules/navigation.css":
+/*!****************************************************!*\
+  !*** ./node_modules/swiper/modules/navigation.css ***!
+  \****************************************************/
 /***/ (() => {
 
 
 
 /***/ }),
 
-/***/ "(pages-dir-node)/./node_modules/swiper/modules/pagination/pagination.min.css":
-/*!*******************************************************************!*\
-  !*** ./node_modules/swiper/modules/pagination/pagination.min.css ***!
-  \*******************************************************************/
+/***/ "(pages-dir-node)/./node_modules/swiper/modules/pagination.css":
+/*!****************************************************!*\
+  !*** ./node_modules/swiper/modules/pagination.css ***!
+  \****************************************************/
 /***/ (() => {
 
 
 
 /***/ }),
 
-/***/ "(pages-dir-node)/./node_modules/swiper/swiper.min.css":
-/*!********************************************!*\
-  !*** ./node_modules/swiper/swiper.min.css ***!
-  \********************************************/
+/***/ "(pages-dir-node)/./node_modules/swiper/swiper.css":
+/*!****************************************!*\
+  !*** ./node_modules/swiper/swiper.css ***!
+  \****************************************/
 /***/ (() => {
 
 
